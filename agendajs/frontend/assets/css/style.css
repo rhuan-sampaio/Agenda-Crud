@@ -1,0 +1,10 @@
+.errormsg{
+    color:red;
+    font-size: 14px;
+    margin-top: 5px;
+    line-height: 10px;
+}
+.table-title{
+    background: rgba(201, 200, 200,0.5);
+    font-weight: bold;
+}

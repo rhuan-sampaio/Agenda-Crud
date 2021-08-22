@@ -1,0 +1,51 @@
+<%- include('./includes/header') %>
+<%- include('./includes/nav') %>
+
+<section class="section main-bg">
+    <div class="content-headers">
+        <h2>Cadastrar Contato</h2>
+        <p>Insira as informações nos campos abaixo</p>
+    </div>
+<%- include('./includes/messages') %>
+    
+    <div class="form-container">
+                    <form class="contact-register" action="/contato/register" method="POST">
+                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                        <div class="mg input-div">
+                            <label class="form-label">Nome</label>
+                            <input class="form-input" type="text" class="form-control" aria-describedby="nome"name="name" placeholder="Nome do Contato">
+                        </div>
+                        
+                        
+                        <div class="mg input-div">
+                            <label class="form-label">Sobrenome</label>
+                            <input class="form-input" type="text" class="form-control" aria-describedby="nome"name="lastname" placeholder="Sobrenome do Contato">
+                        </div>
+                        
+                        
+                        
+                        <div class="mg input-div">
+                            <label class="form-label">Insira o E-mail</label>
+                            <input class="form-input" type="email" class="form-control" aria-describedby="email" name="email" placeholder="E-mail do Contato">
+                        </div>
+                        
+                        
+                        <div class="mg  input-div">
+                            <label class="form-label">Telefone</label>
+                            <input class="form-input" type="tel" class="form-control" aria-describedby="number"name="number" placeholder="Número do Contato">
+                        </div>
+                        
+                
+                        <div class="mg spacing input-div">
+                            <button type="submit" class="btn btn-primary">Cadastrar contato</button>
+                        </div>
+                        
+                      </form>
+
+                </div>
+</section>
+                    
+            
+
+
+<%- include('./includes/footer') %>

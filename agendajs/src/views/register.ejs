@@ -1,0 +1,56 @@
+<%- include('./includes/header') %>
+<%- include('./includes/nav') %>
+
+<section class="section main-bg">
+  <div class="content-headers">
+      <h2>Registre-se</h2>
+      <p>Crie sua conta abaixo.</p>
+  </div>
+<%- include('./includes/messages') %>
+            
+            <div class="form-container">
+                    <form class="form-register" action="/login/register" method="POST">
+                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                        <div class="mg input-div">
+                          <label class="form-label">Insira o E-mail:</label>
+                          <input class="form-input" type="email" class="form-control" aria-describedby="email" name="email" placeholder="Digite seu E-mail">
+                        </div>
+                      
+                      
+                      <div class="mg input-div">
+                          <label class="form-label">Nome:</label>
+                          <input class="form-input" type="text" class="form-control" aria-describedby="nome"name="name" placeholder="Digite seu Nome">
+                      </div>
+                      
+                    
+                      
+                      
+                      <div class="mg input-div">
+                          <label class="form-label">Senha:</label>
+                          <input class="form-input" type="password" class="form-control"name="password" placeholder="Digite sua Senha">
+                      </div>
+                      
+                    
+                      
+                      
+                      <div class="mg input-div">
+                          <label class="form-label">Repita a senha:</label>
+                          <input class="form-input" type="password" class="form-control"name="rpassword" placeholder="Repita a Senha">
+                      </div>
+                      
+                      <div class="mg input-div">
+                         <button type="submit">Criar conta</button>
+                      </div>
+
+                    </form>
+
+                    <div class="mg spacing align-center">
+                      <a href="/login/index" class="register ">Clique aqui caso já tenha conta.</a>
+                    </div>
+
+                </div>
+                
+              
+</section>
+
+<%- include('./includes/footer') %>

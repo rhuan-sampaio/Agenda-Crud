@@ -1,0 +1,46 @@
+<%- include('./includes/header') %>
+<%- include('./includes/nav') %>
+
+<section class="section">
+    <div class="content-headers">
+        <h1>Seja bem-vindo, <%= user.name %> </h1>
+         <p>Sua lista de contatos:</p> 
+     </div>
+            <%- include('./includes/messages') %>
+            
+            <table class="contact-table">
+                    <% if(contatos.length > 0) {%>
+                        <tr>
+                            <tr>
+                                <th scope="col">Nome</th scope="col">
+                                <th scope="col">Sobrenome</th>
+                                <th scope="col">E-mail</th>
+                                <th scope="col">Número</th>
+                                <th scope="col" class="table-end th-options" id="th" colspan="2">Opções</th>
+                            </tr>
+                            
+                        </tr>
+                    <% contatos.forEach( contato =>{ %>
+                        
+                        <tr>
+                            <td data-label="Nome"> <%= contato.name %> </td>
+                            <td data-label="Sobrenome"> <%= contato.lastname %> </td>
+                            <td data-label="E-mail"> <%= contato.email %> </td>
+                            <td data-label="Número"> <%= contato.number %> </td>
+                                
+                            <% if(user){ %>
+                            <td data-label="Opções"> <a href="/contato/index/<%=contato._id%>"> Editar </a> </td>
+                            <td data-label="Opções"> <a class="danger" href="/contato/delete/<%=contato._id%>"> Excluir </a> </td>
+                            <% } %>
+                        </tr>
+                    <%  }) %>
+                    <%}else{%>
+                        <p class="align-center">Ainda não existem contatos cadastrados.</p>
+
+                    <%}%>
+                    
+                </table>
+</section>    
+
+
+<%- include('./includes/footer') %>

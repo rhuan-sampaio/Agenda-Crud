@@ -1,0 +1,36 @@
+<%- include('./includes/header') %>
+<%- include('./includes/nav') %>
+
+<section class="section main-bg">
+    <div class="content-headers">
+        <h2>Faça seu login:</h2>
+        <p>Entre com seu e-mail e senha.</p>
+    </div>
+<%- include('./includes/messages') %>
+<div class="form-container">
+                    <form class="form-login" action="/login/enter" method="POST">
+                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                        <div class="mg input-div">
+                            <label class="form-label">E-mail: </label>
+                            <input class="form-input" type="email" class="form-control" aria-describedby="email" name="email" placeholder="E-mail">  
+                        </div>
+                           
+                        <div class="mg input-div">
+                            <label class="form-label"> Senha: </label>
+                            <input class="form-input" type="password" class="form-control" name="password" placeholder="Senha">
+                        </div>
+            
+                        
+                        <div class="mg input-div">
+                            <button type="submit">Entrar</button>
+                        </div>
+                      </form>
+                      <div class="mg spacing align-center"><a href="/login/register" class="register ">Clique aqui caso não tenha cadastro</a></div>
+                </div>
+        
+                
+</section>
+
+
+
+<%- include('./includes/footer') %>

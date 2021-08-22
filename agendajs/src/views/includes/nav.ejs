@@ -1,0 +1,29 @@
+<input type="checkbox" id="close-menu" aria-label="Close Menu" role="button" class="close-menu">
+<label class="close-menu-label" for="close-menu" title="close menu"></label>
+<aside class="menu">
+  
+    <section class="menu-content">
+            <h1 onclick="getElementById('close-menu').checked = false"> <a href="/">AGENDA</a> </h1>
+    <nav>
+        <ul>
+          <% if(user){ %>
+            <li onclick="getElementById('close-menu').checked = false"><a href="/contato/index">Cadastrar Contato</a></li>
+                
+            <li onclick="getElementById('close-menu').checked = false"><a href="/login/logged">Meus Contatos</a></li>
+
+            <li onclick="getElementById('close-menu').checked = false"><a href="/login/logout">Sair da Conta</a></li>
+
+  
+          <% }else{ %>
+            <li onclick="getElementById('close-menu').checked = false"><a href="/login/index">Login</a></li>
+            <li onclick="getElementById('close-menu').checked = false"><a href="/login/register">Criar Conta</a></li>
+          <% } %>
+
+        </ul>
+      </nav> 
+  </section>
+  </aside>
+  <div class="menu-spacing"></div>
+  
+
+
