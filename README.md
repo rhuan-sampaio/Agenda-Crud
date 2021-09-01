@@ -1,5 +1,21 @@
-# rhsampaio
+# AGENDA
+> Status: Developing ⚠️ <br>
 AgendaJs is a CRUD operation build in NodeJS(Express) and MongoDB(Mongoose) on MVC design pattern.
 
-* .env file was not included in this commit
-* node_modules path was not included in this commit
+
+## Dependencies:
+* ExpressJS
+* MongoDB(Mongoose)
+* EJS
+* DotEnv
+* BcryptJs
+* Webpack
+* Helmet
+
+## Requirements
+* .env file configuration
+* Node_modules installed
+* An available noSQL Database (MongoDB)
+
+### .env File config
+CONNECTIONSTRING=__databaseURL__
